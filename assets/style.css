@@ -69,41 +69,42 @@ h2 {
 }
 
 .sobre {
-  display: flex;
-  flex-direction: row-reverse;
+  display: flexbox;
+  display: flexbox;
+  text-align: center;
+  justify-content: center;
   width: 80vw; /* tamanho fixo de largura, de 80 pedaços da viewport (area total do navegador) "a viewport sempre vai até o 100 */
-  margin: 0 auto; /* 0 de margem para cima e para baixo, automatico para os lados... isso deixa o conteudo ao centro da tela */
-  gap: 2rem;
+  margin: auto; /* 0 de margem para cima e para baixo, automatico para os lados... isso deixa o conteudo ao centro da tela */
+  gap: 2 rem;
 }
 
 .textos {
   color: var(--accent-color);
-  display: flex;
+  display: flexbox;
   text-align: center;
   justify-content: center;
   gap: 1.25rem;
-  width: 60%;
+  width: 70%;
   font-size: 1.25rem;
   font-weight: 300;
   user-select: none; /* impedindo que o usuário possa selecionar o conteudo desse bloco */
 }
 
+.sobre img {
+  height: auto;
+  width: max(35%, 300px); /* com o svalor max(), podemos passar 2 valores, e sempre será escolhido o maior entre eles, então quando 30% do espaço disponivel for menor do que 350px, o segundo valor será usado */
+  object-fit: contain; /* ajuste de imagem, para que ela nao corte, ela sempre irá se conter dentro do espaço, ajustando automaticamente */ 
+  border-radius: 0.5rem;
+  border: 2px solid var(--accent-color);
+  padding: 2px;
+} 
+
 .sobre img:hover {
   opacity: 1; /* voltando a opacidade da imagem pra 100% */
-
+  
 }
 
-.video {
-  margin-top: 1rem;
-}
 
-.youtube {
-  width: 70vw;
-  aspect-ratio: 16/9; /* manter a proporção automatica do video... para cada 16 de largura, vai ter 9 de altura (esse é o padrão de basicamente qualquer monitor ou tv, por exemplo) */
-  margin: 0.75rem auto;
-  display: block;
-  border-radius: 1rem;
-}
 
 footer {
   font-size: 1.5rem;
@@ -120,7 +121,12 @@ footer span {
   color: var(--main-color);
 }
 
-/* ! estilização do cadastro */
+.tm-social{
+  width: 50px;
+  height: 50px;
+}
+
+/* ! estilização do contato */
 .contato {
   display: flex;
   justify-content: center;
@@ -180,10 +186,6 @@ footer span {
   font-size: 1.5rem;
 }
 
-.contato h3 {
-  font-size: 1.5rem;
-  color: var(--main-color)
-}
 
 .mapa {
   width: max(40vw, 500px);
@@ -215,4 +217,11 @@ footer span {
   .contato form {
     width: 100%;
   }
+
+}
+
+/*Estilos da página contato.html*/
+
+.ml-50 {
+  margin-left: 50px;
 }
